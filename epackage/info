@@ -1,0 +1,39 @@
+Package: key-chord-mode
+Section: extensions
+License: GPL-2+
+Depends: emacs (>= 23)
+Status: unmaintained stable
+Archive:
+Compat:
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Bugs:
+Upstream: David Andersson <l.david.andersson@sverige.nu>
+Upstream-Bugs:
+Vcs-Type: http
+Vcs-Url: http://www.emacswiki.org/emacs/download/key-chord.el
+Homepage:
+Wiki: http://www.emacswiki.org/emacs/KeyChord
+Commentary: key-chord.el
+Info:
+Description: map pairs of simultaneously pressed keys to commands
+ A global minor mode to intercept A "key chord", two keys pressed
+ simultaneously, or a single key quickly pressed twice. Use
+ `key-chord-describe' to list defined chords. It is only possible to
+ records chords in ASCII range 32..126. It is not possible to define key
+ chords involving function keys, control keys, or non-english letter
+ .
+ Tip: Choose two keys that are close to each other on the keyboard, so they
+ can be quickly typed without effort. Chords involving two hands (as
+ opposed to two fingers on one hand) are harder to type (quickly).
+ .
+ Note: key chords longer that 2 keys are not implemented.
+ .
+ Examples:
+ .
+  (key-chord-define-global ",,"     "\C-a")
+  (key-chord-define-global ".."     "\C-e")
+  ;; Insert dollar sign e.g. in European keybard where it's cubersome
+  ;; Right-AltGr-4 combination
+  (key-chord-define-global "r4"     "$")
+ .
+ Note: 2013-09-08 the code hasn't been updated since 2008.
